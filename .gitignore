@@ -19,3 +19,11 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
+
+# Environment files that may contain sensitive data
+.env
+# /config/database.yml
