@@ -1,0 +1,24 @@
+<div class="site-header container">
+
+  <a href="/"
+     class="<%= path == '/' ? 'active' : '' %>">
+    Question submission
+  </a>
+
+  <a href="/mission"
+     class="<%= path == '/mission' ? 'active' : '' %>">
+    Our mission
+  </a>
+
+</div>
+
+
+<div class="site-progress-banner">
+  <h1>questions goal</h1>
+
+  <div class="progress-bar-container">
+    <div class="progress-bar"
+         style="width: <%= 34 %>%;"></div>
+    <div class="progress-label"><%= 34 %> of 100</div>
+  </div>
+</div>

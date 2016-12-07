@@ -1,0 +1,79 @@
+
+.site-header
+  z-index: 10
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 80px
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-end
+  // display: none
+  a
+    color: rgba(#FFF, 0.8)
+    text-decoration: none
+    transition: color 180ms
+    margin-right: 20px
+    &:hover
+      color: #FFF
+    &.active
+      color: #FFF
+      border-bottom: solid 1px #FFF
+
+
+.site-progress-banner
+  left: 0
+  right: 0
+  bottom: 0
+  position: fixed
+  padding: 10px 20px
+  background: #F2F2F3
+  border-top: solid 4px rgba(#000, 0.5)
+  z-index: 9
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  // text-transform: uppercase
+  font-family: 'Nunito', sans-serif
+  font-weight: 400
+
+  h1
+    margin: 0
+    margin-right: 20px
+    font-size: 24px
+
+  .progress-bar-container
+    position: relative
+    background: #1B1B1B
+    width: 100px
+    flex-grow: 1
+    overflow: hidden
+    border-radius: 3px
+    padding: 5px
+  .progress-bar
+    height: 40px
+    // background: #07499C
+    background: #0167bc
+
+  .progress-label
+    position: absolute
+    top: 0
+    right: 10px
+    bottom: 0
+    display: flex
+    color: #FFF
+    align-items: center
+
+  @media (max-width: 700px)
+    padding-left: 10px
+    padding-right: 10px
+
+    h1
+      font-size: 17px
+      margin-right: 10px
+    // .progress-bar-container
+    .progress-bar
+      height: 30px

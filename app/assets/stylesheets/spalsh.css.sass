@@ -1,0 +1,106 @@
+
+.splash-bg
+  position: relative
+  background-size: cover
+  background-position: top center
+  background-repeat: no-repeat
+  // background-color: #2C2C2E
+  background-color: #1F1F1F
+  transition: background 1.5s linear
+
+  .splash-bg-overlay
+    min-height: 100vh
+    padding-top: 100px
+    padding-bottom: 100px
+    background-color: rgba(#000, .1)
+
+  h1
+    text-transform: uppercase
+    font-family: 'Nunito', sans-serif
+    font-weight: 400
+
+  p
+    // text-transform: uppercase
+    font-family: 'Nunito', sans-serif
+    font-weight: 400
+    font-size: 20px
+
+  h1, p
+    color: rgba(#FFF, 0.8)
+    margin: 5px 0
+    span
+      padding: 4px 9px
+      display: inline-block
+      background: rgba(#000, .8)
+      border-radius: 6px
+
+  img
+    margin-top: 40px
+    max-width: 300px
+    border: solid 10px #1A1A1A
+    border-radius: 6px
+    background: #1A1A1A
+
+  $ceneteredContentWidth: 640px
+
+  .centered-container
+    position: relative
+    width: 640px
+    max-width: 100%
+
+    // Mobile
+    @media (max-width: $ceneteredContentWidth)
+      p
+        font-size: 16px
+
+      .splash-input-container
+        left: 10px
+        right: 10px
+        width: auto
+        margin-left: 0
+        border-width: 16px
+
+        input
+          $height: 44px
+          padding: 6px 10px
+          height: $height
+          line-height: $height
+
+
+  .splash-input-container
+    margin-top: 30px
+
+    display: flex
+    flex-direction: column
+    background: none
+    border-radius: 6px
+    border: solid 26px #1A1A1A
+    textarea
+      display: block
+      width: auto
+      height: 80px
+      resize: vertical
+
+    input, textarea
+      padding: 10px
+      color: #FFF
+      border: solid 4px #FFF
+      background: rgba(#000, 0.8)
+
+    .input-btn-container
+      display: flex
+      flex-direction: row
+      border-top: solid 10px #1A1A1A
+
+    input
+      $height: 64px
+      height: $height
+      flex-grow: 1
+      line-height: $height
+
+    .btn-container
+      background: #1A1A1A
+      padding-left: 10px
+    .btn
+      border-radius: 0
+      height: 100%

@@ -1,0 +1,36 @@
+<%= render('partials/header', path: '/') %>
+
+<div class="splash-bg"
+     style="background-image: url(<%= image_path('new-zealand/queenstown.jpg') %>);">
+  <div class="splash-bg-overlay">
+
+    <div class="container">
+      <!-- <h1>starting up</h1> -->
+
+      <div class="centered-container">
+        <p><span>Want to start a business from New Zealand?</span></p>
+        <p><span>What's holding you back?</span></p>
+        <p><span>What do you want to know before you start?</span></p>
+        <p><span>We'll choose the top 10 questions and have them answered by the people who have been there and done the things you want to do</span></p>
+
+        <!-- <p><span>submit your questions</span></p>
+        <p><span>we'll select the top 10 and find you the answers</span></p> -->
+
+        <!-- <p>"I'm looking to help young Kiwis start business from New Zealand" - Ben Wigley</p> -->
+
+        <div class="splash-input-container">
+          <textarea type="text" placeholder="Your question..."></textarea>
+          <div class="input-btn-container">
+            <input type="text" placeholder="example@mail.com...">
+            <div class="btn-container">
+              <button class="btn btn-blue">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
