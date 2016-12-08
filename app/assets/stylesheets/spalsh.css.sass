@@ -2,11 +2,14 @@
 .splash-bg
   position: relative
   background-size: cover
-  background-position: top center
+  background-position: center center
   background-repeat: no-repeat
   // background-color: #2C2C2E
   background-color: #1F1F1F
   transition: background 1.5s linear
+
+  // $solidBgColor: #1F1F1F
+  $solidBgColor: rgba(#000, .9)
 
   .splash-bg-overlay
     min-height: 100vh
@@ -31,15 +34,15 @@
     span
       padding: 4px 9px
       display: inline-block
-      background: rgba(#000, .8)
+      background: $solidBgColor
       border-radius: 6px
 
   img
-    margin-top: 40px
+    margin-top: 15px
     max-width: 300px
-    border: solid 10px #1A1A1A
+    border: solid 10px $solidBgColor
     border-radius: 6px
-    background: #1A1A1A
+    background: $solidBgColor
 
   $ceneteredContentWidth: 640px
 
@@ -74,7 +77,7 @@
     flex-direction: column
     background: none
     border-radius: 6px
-    border: solid 26px #1A1A1A
+    border: solid 26px $solidBgColor
     textarea
       display: block
       width: auto
@@ -90,7 +93,12 @@
     .input-btn-container
       display: flex
       flex-direction: row
-      border-top: solid 10px #1A1A1A
+      border-top: solid 10px $solidBgColor
+
+    .success-msg
+      color: #FFF
+      padding-top: 20px
+      background: $solidBgColor
 
     input
       $height: 64px
@@ -99,7 +107,7 @@
       line-height: $height
 
     .btn-container
-      background: #1A1A1A
+      background: $solidBgColor
       padding-left: 10px
     .btn
       border-radius: 0

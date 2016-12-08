@@ -7,7 +7,7 @@
     <div class="container">
       <!-- <h1>starting up</h1> -->
 
-      <div class="centered-container">
+      <form class="centered-container">
         <p><span>Want to start a business from New Zealand?</span></p>
         <p><span>What's holding you back?</span></p>
         <p><span>What do you want to know before you start?</span></p>
@@ -19,17 +19,25 @@
         <!-- <p>"I'm looking to help young Kiwis start business from New Zealand" - Ben Wigley</p> -->
 
         <div class="splash-input-container">
-          <textarea type="text" placeholder="Your question..."></textarea>
+          <textarea type="text"
+                    placeholder="Your question..."
+                    name="body"><%= params[:body] %></textarea>
           <div class="input-btn-container">
-            <input type="text" placeholder="example@mail.com...">
+            <input type="text"
+                   placeholder="example@mail.com..."
+                   name="email"
+                   value="<%= params[:email] %>" />
             <div class="btn-container">
               <button class="btn btn-blue">
-                Submit
+                Submit <%= @questions_count %>
               </button>
             </div>
           </div>
+          <% if @success_msg %>
+            <div class="success-msg"><%= @success_msg %></div>
+          <% end %>
         </div>
-      </div>
+      </form>
 
     </div>
   </div>
