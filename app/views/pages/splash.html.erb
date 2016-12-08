@@ -7,7 +7,7 @@
     <div class="container">
       <!-- <h1>starting up</h1> -->
 
-      <form class="centered-container">
+      <form method="POST" action="/" class="centered-container">
         <p><span>Want to start a business from New Zealand?</span></p>
         <p><span>What's holding you back?</span></p>
         <p><span>What do you want to know before you start?</span></p>
@@ -37,6 +37,8 @@
             <div class="success-msg"><%= @success_msg %></div>
           <% end %>
         </div>
+
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       </form>
 
     </div>
