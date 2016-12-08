@@ -1,4 +1,10 @@
 
+preloadImages = (arrayOfImages) ->
+  $(arrayOfImages).each ->
+    img = new Image()
+    img.src = this
+
+
 $(document).ready ->
 
   # Only run this on the splash page
@@ -29,3 +35,6 @@ $(document).ready ->
     currentImage = images[currentImageIndex]
 
   , seconds * 1000
+
+
+  preloadImages(images)
