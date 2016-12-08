@@ -22,5 +22,9 @@
 
   <body>
     <%= yield %>
+
+    <% if Rails.env == 'production' %>
+      <%= render('partials/ga') %>
+    <% end %>
   </body>
 </html>
