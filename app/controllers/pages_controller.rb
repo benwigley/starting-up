@@ -15,6 +15,11 @@ class PagesController < ApplicationController
         return render
       end
 
+      if !(params[:email] =~ /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/i)
+        @success_msg = "Please enter a valid email address."
+        return render
+      end
+
       if Question.find_by_body(params[:body])
         @success_msg = "That question has already been asked :-)"
         return render
