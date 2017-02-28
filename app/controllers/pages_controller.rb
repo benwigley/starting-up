@@ -46,7 +46,8 @@ class PagesController < ApplicationController
 
 
   def set_question_count
-    @questions_count = [Question.count, 100].min
+    min_display_value = 35 + Question.count
+    @questions_count = [Question.count, min_display_value, 100].min
   end
 
 end
